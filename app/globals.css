@@ -1,26 +1,81 @@
-@import "tailwindcss";
+  @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  /* ===== RESET ===== */
+  html,
+  body {
+    margin: 0;
+    padding: 0;
   }
-}
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
+  /* ===== BASE ===== */
+  body {
+    background-color: #ffffff;
+    color: #111111;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    font-family: var(--font-anuphan), var(--font-noto-thai),
+      system-ui, sans-serif;
+
+  }
+
+  /* ===== TYPOGRAPHY SYSTEM ===== */
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+
+  h5,
+  h6 {
+    font-weight: 500;
+  }
+
+  p {
+    font-weight: 400;
+    line-height: 1.75;
+  }
+
+  /* Caption / small text */
+  .small-text {
+    font-size: 0.875rem;
+    letter-spacing: 0.08em;
+  }
+
+  /* English / Brand / Product name */
+  .en {
+    font-family: var(--font-geist-sans), sans-serif;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+  }
+
+  /* ===== LAYOUT ===== */
+  main {
+    padding: 0;
+    /* ❌ ห้ามมี padding-top */
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* ===== LINK ===== */
+  a {
+    text-decoration: none;
+
+  }
+
+  /* ===== IMAGE ===== */
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* ===== FORM / BUTTON ===== */
+  button,
+  input,
+  textarea {
+    font-family: inherit;
+  }

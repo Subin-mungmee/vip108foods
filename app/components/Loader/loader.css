@@ -1,0 +1,11 @@
+.loader-wrapper {
+  position: fixed;
+  inset: 0;
+  background-color: #ba2529;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  z-index: 9999;
+}

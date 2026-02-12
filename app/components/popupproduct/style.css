@@ -1,0 +1,94 @@
+/* CSS สำหรับปรับขนาดการ์ด */
+.product-card {
+    background-color: #f6f7fa;
+    height: 27rem;
+    width: 100%;
+    max-width: 18rem;
+    margin: auto;
+    border-radius: 5px;
+  }
+  
+  .product-card-title {
+    color: #555555;
+    font-size: 1.25rem;
+  }
+  
+  .product-card-text {
+    color: #ba2529;
+    font-size: 1rem;
+  }
+  
+  /* เพิ่ม padding สำหรับ container */
+  .slider-container {
+    padding: 0 1rem;  /* ทำให้มีช่องว่างซ้ายขวาบนมือถือ */
+  }
+  
+  /* ตั้งค่า slick-carousel */
+  .slick-slide {
+    display: flex;
+    justify-content: center;
+    padding: 0 5px; /* เพิ่มพื้นที่ระหว่างการ์ด */
+  }
+  
+  /* ตั้งค่าให้มีการลดขนาดบนอุปกรณ์ที่เล็กลง */
+  @media (max-width: 1024px) {
+    .product-card {
+      width: 45%;  /* แสดง 2 การ์ดต่อแถว */
+      margin: auto;
+    }
+  
+    .product-card-title {
+      font-size: 1.15rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .product-card {
+      width: 90%; /* ลดขนาดการ์ดลงเหลือ 90% */
+      margin: auto;
+    }
+  
+    .product-card-title {
+      font-size: 1rem;
+    }
+  
+    .product-card-text {
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .product-card {
+      width: 100%; /* แสดง 1 การ์ดต่อแถว */
+      margin: auto;
+    }
+  
+    .product-card-title {
+      font-size: 1rem;
+    }
+  
+    .product-card-text {
+      font-size: 0.9rem;
+    }
+  }
+  
+  /* ตั้งค่าขนาดที่เล็กที่สุด */
+  @media (max-width: 480px) {
+    .product-card {
+      width: 100%;
+      margin: auto;
+    }
+  
+    .product-card-title {
+      font-size: 1rem;
+    }
+  
+    .product-card-text {
+      font-size: 0.85rem;
+    }
+  
+    .slider-container {
+      padding: 0 0.5rem;  /* เพิ่มพื้นที่เล็กน้อยในมือถือ */
+    }
+  }
+  

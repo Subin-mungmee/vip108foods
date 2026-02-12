@@ -1,0 +1,54 @@
+.bottleWrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 520px;
+  overflow: hidden; /* 🔥 กันหลุด */
+}
+
+
+.bottle {
+  position: relative;
+  z-index: 2;
+}
+
+/* ===== CHILI ===== */
+
+.leaf {
+  position: absolute;
+  width: 90px;
+  left: 12%;
+  bottom: 120px;
+  z-index: 1;
+}
+
+.leaf2 {
+  position: absolute;
+  width: 120px;
+  right: 10%;
+  top: 120px;
+  z-index: 1;
+}
+
+.leaf3 {
+  position: absolute;
+  width: 70px;
+  right: 22%;
+  bottom: 100px;
+  z-index: 1;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .bottleWrapper {
+    min-height: 420px;
+  }
+
+  .leaf,
+  .leaf2,
+  .leaf3 {
+    transform: scale(0.8);
+    opacity: 0.85;
+  }
+}
