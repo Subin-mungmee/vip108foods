@@ -11,6 +11,7 @@ import {
   FaHome,
   FaEnvelope,
   FaPhone,
+  FaLine,
 } from "react-icons/fa";
 
 export default function Footer() {
@@ -32,7 +33,7 @@ export default function Footer() {
 
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <a
-              href="/contact"
+              href="/about"
               className="
                 inline-flex items-center justify-center
                 bg-white text-[#077a4f]
@@ -48,7 +49,7 @@ export default function Footer() {
             </a>
 
             <a
-              href="/Oem"
+              href="/oem"
               className="
                 inline-flex items-center justify-center
                 border border-white/80
@@ -111,8 +112,8 @@ export default function Footer() {
             </h6>
             <ul className="space-y-2 text-sm opacity-90">
               <li><a href="/" className="hover:underline">หน้าแรก</a></li>
-              <li><a href="/Oem" className="hover:underline">บริการของเรา</a></li>
-              <li><a href="/About" className="hover:underline">เกี่ยวกับเรา</a></li>
+              <li><a href="/oem" className="hover:underline">บริการของเรา</a></li>
+              <li><a href="/about" className="hover:underline">เกี่ยวกับเรา</a></li>
               <li><a href="#" className="hover:underline">ประเภทน้ำพริก</a></li>
             </ul>
           </div>
@@ -151,7 +152,10 @@ export default function Footer() {
                 <FaPhone />
                 093-562-4262
               </li>
-              <li>@Vip108Foods</li>
+              <li className="flex gap-2">
+                <FaLine />
+                @Vip108Foods
+              </li>
             </ul>
           </div>
         </div>
