@@ -150,7 +150,7 @@ export default function Footer() {
               </li>
               <li className="flex gap-2">
                 <FaPhone />
-                093-562-4262
+                061-424-6362
               </li>
               <li className="flex gap-2">
                 <FaLine />
