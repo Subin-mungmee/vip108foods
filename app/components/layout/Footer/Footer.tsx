@@ -141,7 +141,7 @@ export default function Footer() {
                 <FaHome className="mt-1 shrink-0" />
                 <span>
                   176 หมู่ 3 ต.ค้างพลู อ.โนนไทย
-                  จ.นครราชสีมา 30220
+                  จ.นครราชสีมา 30220.
                 </span>
               </li>
               <li className="flex gap-2">
