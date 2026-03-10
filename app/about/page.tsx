@@ -62,7 +62,7 @@ export default function ContactPage() {
 
                             <li className="flex gap-4 items-center">
                                 <FaPhone className="text-[#ba2529] text-xl" />
-                                093-562-4262
+                                061-424-6362
                             </li>
 
                             <li className="flex gap-4 items-center">
@@ -72,7 +72,7 @@ export default function ContactPage() {
 
                             <li className="flex gap-4 items-center">
                                 <FaLine className="text-[#ba2529] text-xl" />
-                                @Vip108Foods
+                                0968782740
                             </li>
 
                         </ul>

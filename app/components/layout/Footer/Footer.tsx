@@ -154,7 +154,7 @@ export default function Footer() {
               </li>
               <li className="flex gap-2">
                 <FaLine />
-                @Vip108Foods
+                0968782740
               </li>
             </ul>
           </div>
