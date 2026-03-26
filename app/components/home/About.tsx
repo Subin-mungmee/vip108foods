@@ -64,7 +64,6 @@ export default function AboutUs() {
                         </div>
 
                         {/* Image */}
-                        {/* Image */}
                         <div
                             data-aos="fade-left"
                             className="flex items-center justify-center"
@@ -76,7 +75,7 @@ export default function AboutUs() {
                                 className="block"
                             >
                                 <Image
-                                    src="https://img5.pic.in.th/file/secure-sv1/Pic-video-1.png"
+                                    src="/Pic video-1.png"
                                     alt="VIP 108 FOODS MARKET"
                                     width={600}
                                     height={420}
