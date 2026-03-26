@@ -91,7 +91,7 @@ export default function Footer() {
           {/* Logo */}
           <div>
             <Image
-              src="https://img5.pic.in.th/file/secure-sv1/white-Logo-vipfood.png"
+              src="/white-Logo-vipfood.png"
               alt="VIP 108 FOODS MARKET"
               width={150}
               height={55}
