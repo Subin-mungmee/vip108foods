@@ -49,7 +49,7 @@ export default function ContactPage() {
                             <li className="flex gap-4 items-start">
                                 <FaMapMarkerAlt className="text-[#ba2529] mt-1 text-xl shrink-0" />
                                 <span>
-                                    176 หมู่บ้านค้างลพลูใต้ หมู่ที่ 3
+                                    176 หมู่บ้านค้างพลูใต้ หมู่ที่ 3
                                     ตำบลค้างพลู อำเภอโนนไทย
                                     จังหวัดนครราชสีมา 30220
                                 </span>
@@ -67,7 +67,7 @@ export default function ContactPage() {
 
                             <li className="flex gap-4 items-center">
                                 <FaFacebookF className="text-[#ba2529] text-xl" />
-                                Vip108Foodsmarket
+                                โรงงานน้ำพริก 
                             </li>
 
                             <li className="flex gap-4 items-center">
