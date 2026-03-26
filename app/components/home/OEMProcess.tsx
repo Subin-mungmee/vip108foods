@@ -6,12 +6,12 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 const steps = [
-  { title: "RESEARCH & DEVELOPMENT", img: "https://img5.pic.in.th/file/secure-sv1/research69aa12c6b96cb07f.png" },
-  { title: "DESIGN & MEDIA PRODUCTION", img: "https://img2.pic.in.th/pic/graphicfab7078ea8c09f0d.png" },
-  { title: "COSMETIC PLANNING & FILLING", img: "https://img5.pic.in.th/file/secure-sv1/cosmetic.png" },
-  { title: "PACKAGING TEST", img: "https://img5.pic.in.th/file/secure-sv1/packaging.png" },
-  { title: "PRINTING & SCREENING", img: "https://img2.pic.in.th/pic/printing-screen.png" },
-  { title: "CERTIFICATED DOCUMENT", img: "https://img2.pic.in.th/pic/certificatecb9dc1ed1e888098.png" },
+  { title: "RESEARCH & DEVELOPMENT", img: "/icon-oem/1-research.png" },
+  { title: "DESIGN & MEDIA PRODUCTION", img: "/icon-oem/2-graphic.png" },
+  { title: "COSMETIC PLANNING & FILLING", img: "/icon-oem/3-cosmetic.png" },
+  { title: "PACKAGING TEST", img: "/icon-oem/4-packaging.png" },
+  { title: "PRINTING & SCREENING", img: "/icon-oem/5-printing-screen.png" },
+  { title: "CERTIFICATED DOCUMENT", img: "/icon-oem/6-certificate.png" },
 ];
 
 export default function OEMProcess() {
@@ -71,7 +71,7 @@ export default function OEMProcess() {
       {/* ================= BRAND SERVICE ================= */}
       <section className="bg-white py-24 md:py-32">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-[1.2fr_1fr] gap-20 px-4 items-center">
-          
+
           {/* Image */}
           <div
             data-aos="fade-right"
