@@ -27,7 +27,7 @@ const productTypes: ProductTypeData[] = [
   {
     th: "พริกแกง",
     type: "CURRY PASTE",
-    cover: "https://img2.pic.in.th/pic/TyeProduct-1.png",
+    cover: "/TyeProduct-1.png",
     items: [
       { name: "พริกแกงใต้ Red Curry Paste (Southern)", img: "/Product-curry-paste-1.png" },
       { name: "พริกแกงน้ำยาป่า Namya Curry Paste", img: "/Product-curry-paste-2.png" },
@@ -39,7 +39,7 @@ const productTypes: ProductTypeData[] = [
   {
     th: "น้ำจิ้ม",
     type: "SAUCE",
-    cover: "https://img5.pic.in.th/file/secure-sv1/TyeProduct-2.png",
+    cover: "/TyeProduct-2.png",
     items: [
       { name: "น้ำจิ้ม แจ่ว Thai Dried Chili Dipping Sauce (Jaew)", img: "/Product-soure-1.png" },
       { name: "น้ำจิ้ม ลูกชิ้น Meatball Dipping Sauce", img: "/Product-soure-2.png" },
@@ -50,7 +50,7 @@ const productTypes: ProductTypeData[] = [
   {
     th: "น้ำพริก",
     type: "CHILI SAUCE",
-    cover: "https://img5.pic.in.th/file/secure-sv1/TyeProduct-3.png",
+    cover: "/TyeProduct-3.png",
     items: [
       { name: "น้ำพริกนรก Spicy Chili Dip", img: "/Product-banner-chili-01.png" },
       { name: "น้ำพริกเผา สูตรน้ำมันมะกอก Roasted Chili Dip With Olive Oil", img: "/Product-banner-chili-02.png" },
@@ -65,7 +65,7 @@ const productTypes: ProductTypeData[] = [
   {
     th: "เครื่องจิ้ม",
     type: "DIPPING",
-    cover: "https://img5.pic.in.th/file/secure-sv1/TyeProduct-4.png",
+    cover: "/TyeProduct-4.png",
     items: [
       { name: "พริกเกลือ พริกสด Fresh Pepper Salt Dip", img: "/Product-pigklea-1.png" },
       { name: "พริกเกลือ พริกป่น Cayenne Pepper Salt Dip", img: "/Product-pigklea-2.png" },

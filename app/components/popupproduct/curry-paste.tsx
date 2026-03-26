@@ -91,7 +91,7 @@ export default function CurryProducts() {
         <div className="text-center">
           <Image
             src={ProdoctCurry5}
-            alt="พริกแกงเขียวหวาน Green Curry Paste"
+            alt="พริกแกงเขียวหวาน Green Curry Paste."
             className="mx-auto"
           />
           <p className="mt-2 text-sm">
