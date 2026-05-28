@@ -45,7 +45,7 @@ export default function AboutUs() {
                             </h2>
 
                             <h4 className="text-gray-600 text-lg md:text-xl mb-4">
-                                VIP 108 FOODS MARKET
+                                VIP 108 FOODS AND MARKET CO.,LTD.
                             </h4>
 
                             <div className="w-16 h-1 bg-[#ba2529] mb-6" />
