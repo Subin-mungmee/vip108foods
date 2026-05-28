@@ -28,7 +28,7 @@ export default function FactoryPage() {
       <section className="px-4 py-16 md:py-20">
         <div className="max-w-7xl mx-auto relative">
           <Image
-            src="/F-1.jpg"
+            src="/F-2.jpg"
             alt="โรงงานผลิตมาตรฐาน"
             width={1600}
             height={1000}
@@ -113,7 +113,7 @@ export default function FactoryPage() {
 
           <div className="relative">
             <Image
-              src="/IMG_2907.jpg"
+              src="/IMG_2907-1.jpg"
               alt="Quality Control"
               width={700}
               height={500}
@@ -182,7 +182,7 @@ export default function FactoryPage() {
         <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {[
             "/IMG_3784.jpg",
-            "/IMG_2907.jpg",
+            "/IMG_2907-1.jpg",
             "/IMG_2934.jpg",
             "/IMG_2582.jpg",
             "/IMG_2634.jpg",
@@ -207,7 +207,7 @@ export default function FactoryPage() {
       <section className="bg-white pb-16 md:pb-20 px-4">
         <div className="max-w-7xl mx-auto relative">
           <Image
-            src="/IMG_2634.jpg"
+            src="/F-Chili.png"
             alt="Factory Closing"
             width={1600}
             height={900}
