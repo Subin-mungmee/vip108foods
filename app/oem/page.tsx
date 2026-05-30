@@ -40,7 +40,7 @@ export default function FactoryStandardPage() {
       <section className="px-4 py-10 md:py-16 bg-white">
         <div className="max-w-7xl mx-auto">
           <Image
-            src="/bannerOem-body.png"
+            src="/bannerOem-bodyNew.png"
             alt="มาตรฐานโรงงาน VIP FOODS"
             width={1600}
             height={1000}
