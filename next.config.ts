@@ -13,6 +13,16 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+
+  async rewrites() {
+    return [
+      {
+        source: '/VIP-108-FOODS-AND-MARKET.mp4',
+        destination:
+          'https://drive.google.com/uc?export=download&id=1jSAYHtUsKgX68GGfJIHIs6Y7oEGGCxQi',
+      },
+    ]
+  },
 }
 
 export default nextConfig
