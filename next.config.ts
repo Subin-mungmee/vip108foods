@@ -19,7 +19,7 @@ const nextConfig: NextConfig = {
       {
         source: '/VIP-108-FOODS-AND-MARKET.mp4',
         destination:
-          'https://drive.google.com/uc?export=download&id=1jSAYHtUsKgX68GGfJIHIs6Y7oEGGCxQi',
+          'https://acswnhcaohzcsrju.public.blob.vercel-storage.com/VIP-108-FOODS-AND-MARKET.mp4',
       },
     ]
   },
