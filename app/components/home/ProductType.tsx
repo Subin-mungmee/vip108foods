@@ -10,7 +10,8 @@ import { useEffect, useState } from "react";
 /* ================= TYPES ================= */
 
 interface ProductItem {
-  name: string;
+  nameTh: string;
+  nameEn: string;
   img: string;
 }
 
@@ -29,13 +30,12 @@ const productTypes: ProductTypeData[] = [
     type: "CURRY PASTE",
     cover: "/TyeProduct-1.png",
     items: [
-      { name: "พริกแกงใต้ Red Curry Paste (Southern)", img: "/Product-curry-paste-1.png" },
-      { name: "พริกแกงน้ำยาป่า Namya Curry Paste", img: "/Product-curry-paste-2.png" },
-      { name: "พริกแกงเผ็ด Red Curry Paste", img: "/Product-curry-paste-3.png" },
-      { name: "พริกแกงมัสมั่น Masman Curry Paste", img: "/Product-curry-paste-4.png" },
-      { name: "พริกแกงเขียวหวาน Green Curry Paste", img: "/Product-curry-paste-5.png" },
-      { name: "พริกแกงต้มยำ Tom Yum Curry Paste ", img: "/Product-curry-paste-6.png" },
-
+      { nameTh: "พริกแกงใต้", nameEn: "Red Curry Paste (Southern)", img: "/Product-curry-paste-1.png" },
+      { nameTh: "พริกแกงน้ำยาป่า", nameEn: "Namya Curry Paste", img: "/Product-curry-paste-2.png" },
+      { nameTh: "พริกแกงเผ็ด", nameEn: "Red Curry Paste", img: "/Product-curry-paste-3.png" },
+      { nameTh: "พริกแกงมัสมั่น", nameEn: "Masman Curry Paste", img: "/Product-curry-paste-4.png" },
+      { nameTh: "พริกแกงเขียวหวาน", nameEn: "Green Curry Paste", img: "/Product-curry-paste-5.png" },
+      { nameTh: "พริกแกงต้มยำ", nameEn: "Tom Yum Curry Paste", img: "/Product-curry-paste-6.png" },
     ],
   },
   {
@@ -43,13 +43,12 @@ const productTypes: ProductTypeData[] = [
     type: "SAUCE",
     cover: "/TyeProduct-2.png",
     items: [
-      { name: "น้ำจิ้ม แจ่ว Thai Dried Chili Dipping Sauce (Jaew)", img: "/Product-soure-1.png" },
-      { name: "น้ำจิ้ม ลูกชิ้น Meatball Dipping Sauce", img: "/Product-soure-2.png" },
-      { name: "น้ำจิ้ม ซีฟู๊ด Seafood Dipping Sauce", img: "/Product-soure-3.png" },
-      { name: "ซอส ผัดไทย Pad Thai Sauce", img: "/Product-soure-4.png" },
-      { name: "ซอส กะเพรา Kaprao Sauce", img: "/Product-soure-5.png" },
-      { name: "ซอสปรุงรสอาหารไทย Avia Thai Sauce", img: "/Product-soure-6.png" },
-
+      { nameTh: "น้ำจิ้มแจ่ว", nameEn: "Thai Dried Chili Dipping Sauce (Jaew)", img: "/Product-soure-1.png" },
+      { nameTh: "น้ำจิ้มลูกชิ้น", nameEn: "Meatball Dipping Sauce", img: "/Product-soure-2.png" },
+      { nameTh: "น้ำจิ้มซีฟู๊ด", nameEn: "Seafood Dipping Sauce", img: "/Product-soure-3.png" },
+      { nameTh: "ซอสปรุงผัดไทย", nameEn: "Pad Thai Sauce", img: "/Product-soure-4.png" },
+      { nameTh: "ซอสปรุงกะเพรา", nameEn: "Kaprao Sauce", img: "/Product-soure-5.png" },
+      { nameTh: "ซอสปรุงอเนกประสงค์", nameEn: "Stir Fry Sauce", img: "/Product-soure-6.png" },
     ],
   },
   {
@@ -57,16 +56,14 @@ const productTypes: ProductTypeData[] = [
     type: "CHILI SAUCE",
     cover: "/TyeProduct-3.png",
     items: [
-      { name: "น้ำพริกตาแดง เจ Vegan Red Chili Dip", img: "/Product-banner-chili-01.png" },
-      { name: "น้ำพริกเผา Roasted Chili Paste", img: "/Product-banner-chili-02.png" },
-      { name: "น้ำพริกตาแดง Red Chili Dip", img: "/Product-banner-chili-03.png" },
-      { name: "น้ำพริกปลาร้าสับผัดสุก สูตรต้นตำรับ Fermented Fish Spicy Dip (Jaew Bong with coconut oil)", img: "/Product-banner-chili-04.png" },
-      { name: "น้ำพริกนรก ปลาย่าง Spicy Chili Dip", img: "/Product-banner-chili-05.png" },
-      { name: "น้ำพริกเห็ดหอม สูตรมังสวิรัติ Vegan Shiitake Mushroom Chili Paste", img: "/Product-banner-chili-06.png" },
-      { name: "น้ำพริกเผา สูตรต้มยำ Tom Yum Chili Paste", img: "/Product-banner-chili-07.png" },
-      { name: "น้ำพริกเผา สูตรมังสวิรัติ Vegetarian Roasted Chili Paste", img: "/Product-banner-chili-08.png" },
-
-
+      { nameTh: "น้ำพริกตาแดง เจ", nameEn: "Vegan Red Chili Dip", img: "/Product-banner-chili-01.png" },
+      { nameTh: "น้ำพริกเผา", nameEn: "Roasted chili Dip", img: "/Product-banner-chili-02.png" },
+      { nameTh: "น้ำพริกตาแดง", nameEn: "Red Chili Dip", img: "/Product-banner-chili-03.png" },
+      { nameTh: "น้ำพริกปลาร้าสับผัดสุก สูตรน้ำมันมะพร้าว", nameEn: "Fermented fish spicy dip ( Jaew Bong with coconut oil )", img: "/Product-banner-chili-04.png" },
+      { nameTh: "น้ำพริกนรก", nameEn: "Spicy Chili Dip", img: "/Product-banner-chili-05.png" },
+      { nameTh: "น้ำพริกเห็ดหอม สูตรมังสวิรัติ", nameEn: "Vegan Shiitake Mushroom Chili Paste", img: "/Product-banner-chili-06.png" },
+      { nameTh: "น้ำพริกเผา สูตรต้มยำ", nameEn: "Tom Yum Chili Paste", img: "/Product-banner-chili-07.png" },
+      { nameTh: "น้ำพริกเผา สูตรมังสวิรัติ", nameEn: "Vegetarian Roasted Chili Paste", img: "/Product-banner-chili-08.png" },
     ],
   },
   {
@@ -74,14 +71,13 @@ const productTypes: ProductTypeData[] = [
     type: "DIPPING",
     cover: "/TyeProduct-4.png",
     items: [
-      { name: "พริกเกลือ พริกสด Fresh Pepper Salt Dip", img: "/Product-pigklea-1.png" },
-      { name: "พริกเกลือ พริกป่น Cayenne Pepper Salt Dip", img: "/Product-pigklea-2.png" },
-      { name: "พริกเกลือ บ๊วย Plum Chili Salt Dip", img: "/Product-pigklea-3.png" },
-      { name: "พริกสด น้ำตาลปิ๊บ Chili Salt With Coconut Sugar Dip", img: "/Product-pigklea-4.png" },
-      { name: "แจ่ว กะปิ Shrimp Paste And Fermented Fish Sauce", img: "/Product-pigklea-6.png" },
-      { name: "กะปิหวาน แบบแห้ง Dried Sweet Shrimp Paste", img: "/Product-pigklea-7.png" },
-      { name: "น้ำปลาหวาน Sweet Fish Sauce (Original)", img: "/Product-pigklea-8.png" },
-
+      { nameTh: "พริกเกลือ พริกสด", nameEn: "Fresh Pepper Salt Dip", img: "/Product-pigklea-1.png" },
+      { nameTh: "พริกเกลือ พริกป่น", nameEn: "Cayenne Pepper Salt Dip", img: "/Product-pigklea-2.png" },
+      { nameTh: "พริกเกลือ บ๊วย", nameEn: "Plum Chili Salt Dip", img: "/Product-pigklea-3.png" },
+      { nameTh: "พริกสด น้ำตาลปิ๊บ", nameEn: "Chili Salt With Coconut Sugar Dip", img: "/Product-pigklea-4.png" },
+      { nameTh: "แจ่ว กะปิ", nameEn: "Shrimp Paste And Fermented Fish Sauce", img: "/Product-pigklea-6.png" },
+      { nameTh: "กะปิหวาน แบบแห้ง", nameEn: "Dried Sweet Shrimp Paste", img: "/Product-pigklea-7.png" },
+      { nameTh: "น้ำปลาหวาน", nameEn: "Sweet Fish Sauce (Original)", img: "/Product-pigklea-8.png" },
     ],
   },
 ];
@@ -289,11 +285,14 @@ export default function ProductType() {
                   >
                     <img
                       src={product.img}
-                      alt={product.name}
+                      alt={`${product.nameTh} ${product.nameEn}`}
                       draggable={false}
                       className="h-32 mx-auto mb-4 object-contain"
                     />
-                    <p className="font-medium">{product.name}</p>
+                    <p className="text-lg font-medium leading-snug">{product.nameTh}</p>
+                    <p className="mt-1 text-lg text-[#ba2529] leading-snug">
+                      {product.nameEn}
+                    </p>
                   </motion.div>
                 ))}
               </motion.div>
