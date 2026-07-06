@@ -36,6 +36,10 @@ const productTypes: ProductTypeData[] = [
       { nameTh: "พริกแกงมัสมั่น", nameEn: "Masman Curry Paste", img: "/Product-curry-paste-4.png" },
       { nameTh: "พริกแกงเขียวหวาน", nameEn: "Green Curry Paste", img: "/Product-curry-paste-5.png" },
       { nameTh: "พริกแกงต้มยำ", nameEn: "Tom Yum Curry Paste", img: "/Product-curry-paste-6.png" },
+      { nameTh: "พริกแกงต้มข่า", nameEn: "Tom kha Curry Paste", img: "/Product-curry-paste-7.png" },
+      { nameTh: "พริกแกงกะหรี่", nameEn: "Yellow Curry Paste", img: "/Product-curry-paste-8.png" },
+
+
     ],
   },
   {
