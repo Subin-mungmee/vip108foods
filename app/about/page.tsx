@@ -32,20 +32,23 @@ export default function ContactPage() {
 
             <section className="w-full bg-black">
                 <div className="w-full max-w-[1920px] mx-auto">
+                    <div className="relative w-full aspect-video overflow-hidden">
 
-                    <div className="relative w-full aspect-video md:aspect-[21/7] overflow-hidden">
-
-                        <iframe
-                            src="https://drive.google.com/file/d/1WGBKHb4zr2STlu7eINJd94bJDft0W0_C/preview?autoplay=1"
-                            className="absolute inset-0 w-full h-full border-0"
-                            allow="autoplay; fullscreen"
-                            allowFullScreen
-                            loading="eager"
-                            title="VIP 108 FOODS MARKET"
-                        />
+                        <video
+                            className="absolute inset-0 w-full h-full object-contain"
+                            autoPlay
+                            muted
+                            loop
+                            playsInline
+                            preload="metadata"
+                        >
+                            <source
+                                src="https://res.cloudinary.com/uxhsqvaj/video/upload/q_auto,f_auto/v1786708420/1080p-Draft02_%E0%B9%82%E0%B8%A3%E0%B8%87%E0%B8%87%E0%B8%B2%E0%B8%99%E0%B8%99%E0%B8%B3%E0%B8%9E%E0%B8%A3%E0%B8%B4%E0%B8%81.mp4"
+                                type="video/mp4"
+                            />
+                        </video>
 
                     </div>
-
                 </div>
             </section>
 
