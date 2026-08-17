@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useRef } from "react";
 import {
     FaMapMarkerAlt,
     FaEnvelope,
@@ -9,12 +10,76 @@ import {
 } from "react-icons/fa";
 
 export default function ContactPage() {
+    const videoRef = useRef<HTMLVideoElement>(null);
+
+    useEffect(() => {
+        const video = videoRef.current;
+
+        if (!video) return;
+
+        // บังคับให้วิดีโอเป็นเสียงปิด
+        // เพื่อให้ Browser อนุญาต Autoplay
+        video.muted = true;
+
+        const playVideo = async () => {
+            try {
+                video.muted = true;
+                await video.play();
+            } catch (error) {
+                console.log(
+                    "Autoplay ถูกบล็อกโดย Browser:",
+                    error
+                );
+            }
+        };
+
+        // พยายามเล่นทันที
+        playVideo();
+
+        // พยายามเล่นเมื่อโหลดข้อมูลวิดีโอแล้ว
+        const handleLoadedData = () => {
+            playVideo();
+        };
+
+        // พยายามเล่นเมื่อวิดีโอพร้อมเล่น
+        const handleCanPlay = () => {
+            playVideo();
+        };
+
+        video.addEventListener(
+            "loadeddata",
+            handleLoadedData
+        );
+
+        video.addEventListener(
+            "canplay",
+            handleCanPlay
+        );
+
+        return () => {
+            video.removeEventListener(
+                "loadeddata",
+                handleLoadedData
+            );
+
+            video.removeEventListener(
+                "canplay",
+                handleCanPlay
+            );
+        };
+    }, []);
+
     return (
         <main className="w-full bg-white">
 
-            {/* ===== HERO ===== */}
+            {/* ================================================= */}
+            {/* ===== HERO ====================================== */}
+            {/* ================================================= */}
+
             <section className="bg-gradient-to-r from-[#ba2529] to-[#8f1c1f] text-white">
+
                 <div className="max-w-7xl mx-auto px-6 py-16 md:py-20 text-center">
+
                     <h1 className="text-4xl md:text-5xl font-semibold font-kanit tracking-wide">
                         ติดต่อเรา
                     </h1>
@@ -22,7 +87,9 @@ export default function ContactPage() {
                     <p className="mt-4 text-lg text-white/90">
                         Professional OEM Food Manufacturer.
                     </p>
+
                 </div>
+
             </section>
 
 
@@ -31,25 +98,36 @@ export default function ContactPage() {
             {/* ================================================= */}
 
             <section className="w-full bg-black">
+
                 <div className="w-full max-w-[1920px] mx-auto">
+
                     <div className="relative w-full aspect-video overflow-hidden">
 
                         <video
-                            className="absolute inset-0 w-full h-full object-contain"
+                            ref={videoRef}
+                            className="absolute inset-0 w-full h-full object-cover"
                             autoPlay
                             muted
                             loop
                             playsInline
-                            preload="metadata"
+                            preload="auto"
+                            controls={false}
+                            disablePictureInPicture
                         >
+
                             <source
                                 src="https://res.cloudinary.com/uxhsqvaj/video/upload/q_auto,f_auto/v1786708420/1080p-Draft02_%E0%B9%82%E0%B8%A3%E0%B8%87%E0%B8%87%E0%B8%B2%E0%B8%99%E0%B8%99%E0%B8%B3%E0%B8%9E%E0%B8%A3%E0%B8%B4%E0%B8%81.mp4"
                                 type="video/mp4"
                             />
+
+                            Your browser does not support the video tag.
+
                         </video>
 
                     </div>
+
                 </div>
+
             </section>
 
 
@@ -61,7 +139,11 @@ export default function ContactPage() {
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
 
-                    {/* ===== MAP ===== */}
+
+                    {/* ================================================= */}
+                    {/* ===== MAP ======================================= */}
+                    {/* ================================================= */}
+
                     <div className="w-full h-[450px] lg:h-[500px] rounded-2xl overflow-hidden shadow-xl border border-gray-200">
 
                         <iframe
@@ -75,30 +157,44 @@ export default function ContactPage() {
                     </div>
 
 
-                    {/* ===== INFO ===== */}
+                    {/* ================================================= */}
+                    {/* ===== CONTACT INFO ============================== */}
+                    {/* ================================================= */}
+
                     <div className="font-kanit">
 
                         <h2 className="text-3xl font-semibold text-gray-900 mb-8">
                             ข้อมูลติดต่อ
                         </h2>
 
+
                         <ul className="space-y-6 text-gray-700 text-lg leading-relaxed">
 
-                            {/* Address */}
+
+                            {/* ===== ADDRESS ===== */}
+
                             <li className="flex gap-4 items-start">
-                                <FaMapMarkerAlt className="text-[#ba2529] mt-1 text-xl shrink-0" />
+
+                                <FaMapMarkerAlt
+                                    className="text-[#ba2529] mt-1 text-xl shrink-0"
+                                />
 
                                 <span>
                                     176 หมู่บ้านค้างพลูใต้ หมู่ที่ 3
                                     ตำบลค้างพลู อำเภอโนนไทย
                                     จังหวัดนครราชสีมา 30220
                                 </span>
+
                             </li>
 
 
-                            {/* Email */}
+                            {/* ===== EMAIL ===== */}
+
                             <li className="flex gap-4 items-center">
-                                <FaEnvelope className="text-[#ba2529] text-xl shrink-0" />
+
+                                <FaEnvelope
+                                    className="text-[#ba2529] text-xl shrink-0"
+                                />
 
                                 <a
                                     href="mailto:vip108.foodsandmarket@gmail.com"
@@ -106,12 +202,17 @@ export default function ContactPage() {
                                 >
                                     vip108.foodsandmarket@gmail.com
                                 </a>
+
                             </li>
 
 
-                            {/* Phone */}
+                            {/* ===== PHONE ===== */}
+
                             <li className="flex gap-4 items-center">
-                                <FaPhone className="text-[#ba2529] text-xl shrink-0" />
+
+                                <FaPhone
+                                    className="text-[#ba2529] text-xl shrink-0"
+                                />
 
                                 <a
                                     href="tel:0614246362"
@@ -119,12 +220,17 @@ export default function ContactPage() {
                                 >
                                     061-424-6362
                                 </a>
+
                             </li>
 
 
-                            {/* Facebook */}
+                            {/* ===== FACEBOOK ===== */}
+
                             <li className="flex gap-4 items-center">
-                                <FaFacebookF className="text-[#ba2529] text-xl shrink-0" />
+
+                                <FaFacebookF
+                                    className="text-[#ba2529] text-xl shrink-0"
+                                />
 
                                 <a
                                     href="https://www.facebook.com/VIP108Food"
@@ -134,12 +240,17 @@ export default function ContactPage() {
                                 >
                                     โรงงานน้ำพริก
                                 </a>
+
                             </li>
 
 
-                            {/* LINE */}
+                            {/* ===== LINE ===== */}
+
                             <li className="flex gap-4 items-center">
-                                <FaLine className="text-[#ba2529] text-xl shrink-0" />
+
+                                <FaLine
+                                    className="text-[#ba2529] text-xl shrink-0"
+                                />
 
                                 <a
                                     href="https://line.me/ti/p/~0968782740"
@@ -149,12 +260,16 @@ export default function ContactPage() {
                                 >
                                     0968782740
                                 </a>
+
                             </li>
 
                         </ul>
 
 
-                        {/* ===== CTA ===== */}
+                        {/* ================================================= */}
+                        {/* ===== CTA ====================================== */}
+                        {/* ================================================= */}
+
                         <div className="mt-10">
 
                             <a
@@ -163,8 +278,11 @@ export default function ContactPage() {
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center gap-3 rounded-full bg-[#ba2529] px-8 py-3 text-white text-lg hover:bg-[#9f1f23] transition shadow-lg"
                             >
+
                                 <FaMapMarkerAlt />
+
                                 เปิดโลเคชันใน Google Maps
+
                             </a>
 
                         </div>
