@@ -18,7 +18,7 @@ export default function Banner() {
     <section className="w-full overflow-hidden">
       <Image
         data-aos="fade-up"
-        src="/hero-banner.jpg"
+        src="/banner-1.jpg"
         alt="โรงงานรับผลิตอาหาร OEM"
         width={1920}
         height={700}
