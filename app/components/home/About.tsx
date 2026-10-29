@@ -1,11 +1,14 @@
+
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Image from "next/image";
 
 export default function AboutUs() {
+    const [isPlaying, setIsPlaying] = useState(false);
+
     useEffect(() => {
         AOS.init({
             duration: 1200,
@@ -16,7 +19,7 @@ export default function AboutUs() {
 
     return (
         <section className="relative">
-            {/* 🔴 Red Banner */}
+            {/* Red Banner */}
             <div className="h-64 bg-[#ba2529]" />
 
             {/* Content Card */}
@@ -24,15 +27,15 @@ export default function AboutUs() {
                 <div className="container mx-auto px-4">
                     <div
                         className="
-              bg-white
-              rounded-2xl
-              shadow-xl
-              grid
-              md:grid-cols-2
-              gap-10
-              p-8
-              md:p-14
-            "
+                            bg-white
+                            rounded-2xl
+                            shadow-xl
+                            grid
+                            md:grid-cols-2
+                            gap-10
+                            p-8
+                            md:p-14
+                        "
                     >
                         {/* Text */}
                         <div data-aos="fade-right">
@@ -52,7 +55,8 @@ export default function AboutUs() {
 
                             <p className="text-gray-800 text-base md:text-[16.5px] leading-loose">
                                 เป็นโรงงานผลิตอาหารประเภทน้ำพริก ดำเนินกิจการแบบ OEM
-                                ตามมาตรฐาน <strong>GHP</strong> ตอบสนองความต้องการของลูกค้าได้อย่างครบวงจร
+                                ตามมาตรฐาน <strong>GHP</strong>{" "}
+                                ตอบสนองความต้องการของลูกค้าได้อย่างครบวงจร
                                 พร้อมให้บริการในรูปแบบ{" "}
                                 <strong>ONE STOP SERVICE</strong>{" "}
                                 โดยลูกค้าสามารถเลือกสินค้าจากสูตรมาตรฐานที่มีคุณภาพหลากหลายประเภท
@@ -63,34 +67,65 @@ export default function AboutUs() {
                             </p>
                         </div>
 
-                        {/* Image */}
+                        {/* Video Preview */}
                         <div
                             data-aos="fade-left"
-                            className="flex items-center justify-center"
+                            className="flex items-center justify-center w-full"
                         >
-                            <a
-                                href="https://drive.google.com/file/d/1WGBKHb4zr2STlu7eINJd94bJDft0W0_C/preview"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="block"
-                            >
-                                <Image
-                                    src="/Pic video-1.png"
-                                    alt="VIP 108 FOODS MARKET"
-                                    width={600}
-                                    height={420}
-                                    className="
-        rounded-xl
-        shadow-lg
-        transition-transform
-        duration-500
-        hover:scale-105
-        cursor-pointer
-      "
-                                />
-                            </a>
-                        </div>
+                            <div className="relative w-full max-w-[600px] overflow-hidden rounded-xl shadow-lg">
+                                {isPlaying ? (
+                                    <video
+                                        src="https://acswnhcaohzcsrju.public.blob.vercel-storage.com/VIP-108-FOODS-AND-MARKET.mp4"
+                                        controls
+                                        autoPlay
+                                        playsInline
+                                        preload="metadata"
+                                        className="block w-full h-auto"
+                                    >
+                                        เบราว์เซอร์ของคุณไม่รองรับการเล่นวิดีโอ
+                                    </video>
+                                ) : (
+                                    <button
+                                        type="button"
+                                        onClick={() => setIsPlaying(true)}
+                                        aria-label="เล่นวิดีโอ VIP 108 FOODS AND MARKET"
+                                        className="group relative block w-full cursor-pointer overflow-hidden"
+                                    >
+                                        {/* Cover Image */}
+                                        <Image
+                                            src="/Pic video-1.png"
+                                            alt="VIP 108 FOODS AND MARKET"
+                                            width={600}
+                                            height={420}
+                                            priority
+                                            className="
+                                                block
+                                                w-full
+                                                h-auto
+                                                object-cover
+                                                transition-transform
+                                                duration-500
+                                                group-hover:scale-105
+                                            "
+                                        />
 
+                                        {/* Dark Overlay + Play Button */}
+                                        <span className="absolute inset-0 flex items-center justify-center bg-black/20 transition-colors duration-300 group-hover:bg-black/35">
+                                            <span className="flex h-16 w-16 items-center justify-center rounded-full bg-white/95 shadow-xl transition-transform duration-300 group-hover:scale-110">
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 0 24 24"
+                                                    fill="#ba2529"
+                                                    className="ml-1 h-8 w-8"
+                                                >
+                                                    <path d="M7 4.5v15l12-7.5-12-7.5z" />
+                                                </svg>
+                                            </span>
+                                        </span>
+                                    </button>
+                                )}
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
